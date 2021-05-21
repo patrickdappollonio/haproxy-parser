@@ -6,13 +6,13 @@
 
 This program supports feeding the data through `stdin`:
 
-```bash
+```text
 kubectl logs -n ingress-haproxy haproxy-ingress-controller-abcde -c access-log | haproxy-parser
 ```
 
 And it will error out if accessed directly:
 
-```bash
+```text
 $ haproxy-parser
 This program doesn't accept input from stdin. You must pipe the output of the HAProxy Access Logs:
 Example: kubectl logs -n ingress-haproxy haproxy-ingress-controller-abcde -c access-log | haproxy-parser
