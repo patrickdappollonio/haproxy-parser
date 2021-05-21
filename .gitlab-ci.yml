@@ -20,7 +20,8 @@ build:
     - GOOS=darwin go build -a -tags netgo -trimpath -ldflags "-s -w -X main.version=$TAG" -o haproxy-parser-darwin
   artifacts:
     paths:
-      - haproxy-parser
+      - haproxy-parser-linux
+      - haproxy-parser-darwin
     expire_in: 1h
 
 release:
